@@ -3,4 +3,6 @@ project(restoranchik)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(restoranchik main.cpp)
+add_executable(restoranchik main.cpp
+        Dish.cpp
+        Dish.h)

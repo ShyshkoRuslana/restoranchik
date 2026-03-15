@@ -13,7 +13,7 @@ Dish::Dish(string name, double price) {
 }
 Dish::Dish(string name, double price, double weight)
         : name(name), price(price), weight(weight) {}
-        
+
 Dish::~Dish(){}
 
 void Dish::printInfo(){

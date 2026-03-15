@@ -13,3 +13,6 @@ Customer::Customer (const Customer& other){
     name=name;
     tablenumber=tablenumber;
     telnumber=telnumber;}
+void Customer::printInfo()const{
+    cout << "Name: " << name << " | Table namber: " << tablenumber << " | Telephone number: " << telnumber << endl;
+}

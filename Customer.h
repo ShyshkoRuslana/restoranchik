@@ -10,8 +10,6 @@ private:
     int telnumber;
     static int count;
 
-
-
 public:
     Customer();
     Customer(string name, int tablenumber=1, int telnumber=0);

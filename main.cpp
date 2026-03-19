@@ -82,7 +82,14 @@ int main() {
     total.printInfo();
 
     cout << "\nTotal customers created: " << Customer::getcount() << endl;
-    
+
+    cout << "\n=== Customer 7 (input Dish) ===" << endl;
+
+    Dish d7;
+    cout << "Enter dish (name price weight): ";
+    cin >> d7;
+
+    cout << "You entered: " << d7 << endl;
 
 
     return 0;

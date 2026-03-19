@@ -19,7 +19,7 @@ public:
     Dish(string name, double price, double weight);
 
     Dish(const Dish& other);
-    Dish(const Dish&& other);
+    Dish( Dish&& other);
 
     ~Dish();
 

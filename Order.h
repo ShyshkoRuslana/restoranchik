@@ -7,7 +7,7 @@ class Order {
 private:
     int ordernumber;
     double totalsum;
-    
+
 public:
     Order();
     Order(int ordernumber);

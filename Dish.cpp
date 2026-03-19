@@ -20,7 +20,7 @@ Dish::Dish(const Dish& other) {
     price=other.price;
     weight=other.weight;}
 
-Dish::Dish(const Dish&& other) {
+Dish::Dish( Dish&& other) {
     name= move(other.name);
     price = other.price;
     weight = other.weight;}

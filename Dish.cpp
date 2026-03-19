@@ -1,33 +1,30 @@
 #include "Dish.h"
 #include <iostream>
 #include <string>
+using namespace std;
 
 Dish::Dish() : Dish("Unknown", 0.0, 0.0) {}
-
-Dish::Dish(string name)
-        : name(name), price(0.0), weight(0.0) {}
-
+Dish::Dish(string name) : name(name), price(0.0), weight(0.0) {}
 Dish::Dish(string name, double price) {
     this->name = name;
     this->price = price;
     this->weight = 0.0;}
-
-Dish::Dish(string name, double price, double weight)
-        : name(name), price(price), weight(weight) {}
+Dish::Dish(string name, double price, double weight): name(name), price(price), weight(weight) {}
 
 Dish::Dish(const Dish& other) {
     name=other.name;
     price=other.price;
     weight=other.weight;}
 
-Dish::Dish( Dish&& other) {
+Dish::Dish(Dish&& other) {
     name= move(other.name);
     price = other.price;
     weight = other.weight;}
 
 Dish::~Dish() {}
+
 Dish Dish::operator+(const Dish& other) {
-    return Dish(name + " & " + other.name, price + other.price, weight + other.weight);
+    return Dish(name + " and " + other.name, price + other.price, weight + other.weight);
 }
 
 Dish Dish::operator++() {

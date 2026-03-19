@@ -2,12 +2,10 @@
 #define ORDER_H
 using namespace std;
 
-
 class Order {
 private:
     int ordernumber;
     double totalsum;
-
 public:
     Order();
     Order(int ordernumber);
@@ -19,8 +17,5 @@ public:
 
     Order operator+(const Order& other);
     void printInfo()const;
-
 };
-
-
 #endif

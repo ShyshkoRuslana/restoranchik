@@ -11,20 +11,15 @@ private:
     double price;
     double weight;
 
-
 public:
     Dish();
     Dish(string name);
     Dish(string name, double price);
     Dish(string name, double price, double weight);
-
     Dish(const Dish& other);
     Dish( Dish&& other);
-
     ~Dish();
-
     void printInfo() const;
-
 
     Dish operator+(const Dish& other);
     Dish operator++();
@@ -32,6 +27,5 @@ public:
     friend istream& operator>>(istream& in, Dish& d);
 
 };
-
 #endif
 

@@ -9,7 +9,6 @@ private:
     int tablenumber;
     int telnumber;
     static int count;
-
 public:
     Customer();
     Customer(string name, int tablenumber=1, int telnumber=0);
@@ -22,11 +21,7 @@ public:
     void printInfo()const;
     static int getcount();
 
-
-
 };
-
-
 #endif
 
 

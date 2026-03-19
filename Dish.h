@@ -24,7 +24,7 @@ public:
     ~Dish();
 
     void printInfo() const;
-    //double getPrice() const { return price; }
+
 
     Dish operator+(const Dish& other);
     Dish operator++();

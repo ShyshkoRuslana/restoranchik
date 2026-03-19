@@ -63,6 +63,27 @@ int main() {
     cout << "-----------------------------" << endl;
 
 
+    cout << "\n=== Customer 5 (copy) ===" << endl;
+    Customer c5 = c4;
+    c5.printInfo();
+
+    cout << "\n=== Customer 6 (move) ===" << endl;
+    Customer c6 = move(c3);
+    c6.printInfo();
+
+    cout << "\n=== Dish operations ===" << endl;
+    Dish combo = d2 + d4;
+    ++d2;
+    cout << "Combo dish: " << combo << endl;
+    cout << "Updated d2: " << d2 << endl;
+
+    cout << "\n=== Order sum ===" << endl;
+    Order total = o3 + o4;
+    total.printInfo();
+
+    cout << "\nTotal customers created: " << Customer::getcount() << endl;
+    
+
 
     return 0;
 }

@@ -62,7 +62,7 @@ int main() {
     Customer c6 = move(c3);
     c6.printInfo();
     cout << "-----------------------------" << endl;
-    
+
 
     cout << "===Dish operations===" << endl;
     Dish combo = d2 + d4;

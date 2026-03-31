@@ -1,10 +1,19 @@
 #ifndef SALAD_H
 #define SALAD_H
+#include "Dish.h"
+#include <string>
+using namespace std;
 
+class Salad : public Dish{
+private:
+    string with;
+    float cal;
 
-class Salad {
+public:
+    Salad(string name, double price, double weight, string with,float cal );
+    ~Salad();
+    void printInfo();
 
 };
-
 
 #endif

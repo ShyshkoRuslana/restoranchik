@@ -2,6 +2,7 @@
 #include "Dish.h"
 #include "Order.h"
 #include "Customer.h"
+#include "Salad.h"
 using namespace std;
 int main() {
     cout << "===Customer1===" << endl;
@@ -88,6 +89,12 @@ int main() {
 
     cout << "Total customers created:" << Customer::getcount() << endl;
     cout << "-----------------------------" << endl;
+
+
+    cout << "-----------------------------" << endl;
+    Salad s9 ("цезар", 345,670, "chiken", 678);
+    s9.printInfo();
+
 
     return 0;
 }

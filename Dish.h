@@ -19,7 +19,7 @@ public:
     Dish(const Dish& other);
     Dish( Dish&& other);
     ~Dish();
-    void printInfo() const;
+    void printInfo() ;
 
     Dish operator+(const Dish& other);
     Dish operator++();

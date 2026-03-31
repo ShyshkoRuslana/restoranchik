@@ -11,4 +11,6 @@ add_executable(restoranchik main.cpp
         Order.cpp
         Order.h
         Salad.cpp
-        Salad.h)
+        Salad.h
+        Menu.cpp
+        Menu.h)

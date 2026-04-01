@@ -20,7 +20,6 @@ int main() {
     o1.printInfo();
     cout << "-----------------------------" << endl;
 
-
     cout << "===Customer2===" << endl;
     Customer c2("Арінка");
     c2.printInfo();
@@ -32,7 +31,6 @@ int main() {
     Order o2(34);
     o2.printInfo();
     cout << "-----------------------------" << endl;
-
 
     cout << "===Customer3===" << endl;
     Customer c3("Соня", 5);
@@ -46,7 +44,6 @@ int main() {
     o3.printInfo();
     cout << "-----------------------------" << endl;
 
-
     cout << "===Customer4===" << endl;
     Customer c4("Ання", 9, 423);
     c4.printInfo();
@@ -59,18 +56,15 @@ int main() {
     o4.printInfo();
     cout << "-----------------------------" << endl;
 
-
     cout << "===Customer5===" << endl;
     Customer c5 = c4;
     c5.printInfo();
     cout << "-----------------------------" << endl;
 
-
     cout << "===Customer6===" << endl;
     Customer c6 =std::move(c3);
     c6.printInfo();
     cout << "-----------------------------" << endl;
-
 
     cout << "===Dish operations===" << endl;
     Dish combo = d2 + d4;
@@ -103,13 +97,9 @@ int main() {
     cout << "-----------------------------" << endl;
     Salad s1 ("цезар", 345,670, "chiken", 678);
     s1.printInfo();
+
     Salad s2=s1;
     s2.printInfo();
-
-
-    Dish d10("Суп", 120, 300);
-    menu.addDish(d10);
-
 
     Salad s3("Грецький", 150, 250, "курка", 400);
     Salad s4= std::move(s3);

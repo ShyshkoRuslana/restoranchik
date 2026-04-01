@@ -6,25 +6,22 @@ Salad::Salad(string name, double price, double weight, string with, float cal ):
     this->cal=cal;
 }
 Salad::Salad(const Salad& other)
-        : Dish(other) // копіюємо поля батька
+        : Dish(other)
 {
     with = other.with;
     cal = other.cal;
 }
 
-// Move constructor
 Salad::Salad(Salad&& other) noexcept
-        : Dish(std::move(other)) // переносимо поля батька
+        : Dish(std::move(other))
 {
     with = std::move(other.with);
     cal = other.cal;
 }
-
-// Copy assignment operator
 Salad& Salad::operator=(const Salad& other)
 {
     if (this != &other) {
-        Dish::operator=(other); // копіюємо поля батька
+        Dish::operator=(other);
         with = other.with;
         cal = other.cal;
     }

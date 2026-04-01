@@ -6,11 +6,10 @@
 
 class Menu {
 private:
-    std::vector<Dish> dishes;   // для всіх простих страв
-
+    std::vector<Dish> dishes;
 public:
-    void addDish(const Dish& d);   // додаємо просту страву
-    void printMenu();              // показати меню
+    void addDish(const Dish& d);
+    void printMenu();
 };
 
 #endif

@@ -11,8 +11,15 @@ private:
 
 public:
     Salad(string name, double price, double weight, string with,float cal );
+    Salad(const Salad& other);
+
+    Salad(Salad&& other) noexcept;
+
+    Salad& operator=(const Salad& other);
+
     ~Salad();
     void printInfo();
+
 
 };
 

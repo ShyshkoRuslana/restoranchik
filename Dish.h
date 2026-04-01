@@ -23,6 +23,7 @@ public:
 
     Dish operator+(const Dish& other);
     Dish operator++();
+    Dish& operator=(const Dish& other);
     friend ostream& operator<<(ostream& out, const Dish& d);
     friend istream& operator>>(istream& in, Dish& d);
 

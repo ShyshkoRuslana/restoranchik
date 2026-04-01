@@ -3,13 +3,17 @@
 #include "Order.h"
 #include "Customer.h"
 #include "Salad.h"
+#include "Menu.h"
 using namespace std;
 int main() {
+    Menu menu;
+
     cout << "===Customer1===" << endl;
     Customer c1;
     c1.printInfo();
     cout << "-Dish-" << endl;
     Dish d1;
+    menu.addDish(d1);
     d1.printInfo();
     cout << "-Order-" << endl;
     Order o1;
@@ -22,6 +26,7 @@ int main() {
     c2.printInfo();
     cout << "-Dish-" << endl;
     Dish d2("Вареники");
+    menu.addDish(d2);
     d2.printInfo();
     cout << "-Order-" << endl;
     Order o2(34);
@@ -34,6 +39,7 @@ int main() {
     c3.printInfo();
     cout << "-Dish-" << endl;
     Dish d3("Олівє", 67);
+    menu.addDish(d3);
     d3.printInfo();
     cout << "-Order-" << endl;
     Order o3(34, 6789);
@@ -46,6 +52,7 @@ int main() {
     c4.printInfo();
     cout << "-Dish-" << endl;
     Dish d4("Борщ", 85.50, 300);
+    menu.addDish(d4);
     d4.printInfo();
     cout << "-Order-" << endl;
     Order o4(23, 405);
@@ -68,6 +75,7 @@ int main() {
     cout << "===Dish operations===" << endl;
     Dish combo = d2 + d4;
     ++d2;
+    menu.addDish(combo);
     cout << "Combo dish: " << combo << endl;
     cout << "Updated d2: " << d2 << endl;
     cout << "-----------------------------" << endl;
@@ -83,6 +91,7 @@ int main() {
     Dish d7;
     cout << "Enter dish (name price weight): ";
     cin >> d7;
+    menu.addDish(d7);
     cout << "You entered: " << d7 << endl;
     cout << "-----------------------------" << endl;
 
@@ -94,6 +103,13 @@ int main() {
     cout << "-----------------------------" << endl;
     Salad s9 ("цезар", 345,670, "chiken", 678);
     s9.printInfo();
+
+
+    Dish d10("Суп", 120, 300);
+    Salad s10("Грецький", 150, 250, "курка", 400);
+
+    menu.addDish(d10);
+    menu.printMenu();
 
 
     return 0;

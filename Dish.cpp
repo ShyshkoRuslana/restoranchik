@@ -17,7 +17,7 @@ Dish::Dish(const Dish& other) {
     weight=other.weight;}
 
 Dish::Dish(Dish&& other) {
-    name= move(other.name);
+    name= std::move(other.name);
     price = other.price;
     weight = other.weight;}
 

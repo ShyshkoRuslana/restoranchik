@@ -67,7 +67,7 @@ int main() {
 
 
     cout << "===Customer6===" << endl;
-    Customer c6 = move(c3);
+    Customer c6 =std::move(c3);
     c6.printInfo();
     cout << "-----------------------------" << endl;
 
@@ -101,14 +101,25 @@ int main() {
 
 
     cout << "-----------------------------" << endl;
-    Salad s9 ("цезар", 345,670, "chiken", 678);
-    s9.printInfo();
+    Salad s1 ("цезар", 345,670, "chiken", 678);
+    s1.printInfo();
+    Salad s2=s1;
+    s2.printInfo();
 
 
     Dish d10("Суп", 120, 300);
-    Salad s10("Грецький", 150, 250, "курка", 400);
-
     menu.addDish(d10);
+
+
+    Salad s3("Грецький", 150, 250, "курка", 400);
+    Salad s4= std::move(s3);
+    s4.printInfo();
+
+    Salad s5("Королівський", 150, 250, "криветки", 400);
+    s5.printInfo();
+    s5=s4;
+    s5.printInfo();
+
     menu.printMenu();
 
 

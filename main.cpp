@@ -4,6 +4,7 @@
 #include "Customer.h"
 #include "Salad.h"
 #include "Menu.h"
+#include "SpecialSalad.h"
 using namespace std;
 int main() {
     Menu menu;
@@ -120,6 +121,10 @@ int main() {
     c10.addOrder(o12);
 
     c10.printOrder();
+    cout << "-----------------------------" << endl;
+
+    SpecialSalad s67("Цезар", 200, 300, "курка", 500, "часниковий", "yes");
+    s67.printInfo();
 
 
     return 0;

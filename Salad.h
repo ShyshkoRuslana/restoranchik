@@ -5,7 +5,7 @@
 using namespace std;
 
 class Salad : public Dish{
-private:
+protected:
     string with;
     float cal;
 

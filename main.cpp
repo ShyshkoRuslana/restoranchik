@@ -112,6 +112,15 @@ int main() {
 
     menu.printMenu();
 
+    Customer c10("Маруся", 5, 123);
+
+    Order o11(1, 200);
+    c10.addOrder(o11);
+    Order o12(2, 350);
+    c10.addOrder(o12);
+
+    c10.printOrder();
+
 
     return 0;
 }

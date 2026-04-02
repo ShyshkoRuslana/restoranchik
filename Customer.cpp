@@ -1,4 +1,5 @@
 #include "Customer.h"
+#include "Order.h"
 #include <iostream>
 #include <string>
 using namespace std;
@@ -20,6 +21,17 @@ Customer::Customer(Customer&& other){
         count++;
 }
 Customer::~Customer() {}
+
+void Customer::addOrder(const Order &o) {
+    orders.push_back(o);
+}
+
+void Customer::printOrder() {
+    cout<<"=== Order ==="<<endl;
+    for (auto& o:orders) {
+        o.printInfo();
+    }
+}
 
 void Customer::printInfo()const{
     cout << "Name: " << name << " | Table namber: " << tablenumber << " | Telephone number: " << telnumber << endl;

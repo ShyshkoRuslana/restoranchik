@@ -13,6 +13,9 @@ void SpecialSalad::printInfo() {
     Salad::printInfo();
     cout << " | Sauce: " << sauce << " | Spicy: " << spicy <<  endl;
 }
+void SpecialSalad::getName() {
+    cout << "Name Special salad: " << name << endl;
+}
 void SpecialSalad::getPrice() {
-    cout << "Special salad price: " << price << endl;
+    cout << "Price Special salad: " << price << endl;
 }

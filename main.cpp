@@ -129,7 +129,8 @@ int main() {
     Dish* d = new Salad();
     d->show();
 
-    Salad* s = new SpecialSalad();
+    Salad* s = new SpecialSalad("Цезар", 200, 300, "курка", 500, "часниковий", "yes");
+    s->getName();
     s->getPrice();
 
     return 0;

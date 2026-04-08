@@ -37,6 +37,9 @@ void Salad::printInfo(){
 void Salad::show() {
     cout << "This is salad" << endl;
 }
+void Salad::getName() {
+    cout << "name salad: " << name << endl;
+}
 void Salad::getPrice() {
-    cout << "salad price: " << endl;
+    cout << "salad price: " << price << endl;
 }

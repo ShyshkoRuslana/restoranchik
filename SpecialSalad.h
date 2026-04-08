@@ -12,6 +12,7 @@ public:
     ~SpecialSalad();
 
     void printInfo();
+    virtual void getName()override;
     virtual void getPrice() override;
 
 

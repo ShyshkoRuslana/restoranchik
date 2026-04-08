@@ -18,7 +18,7 @@ public:
     Dish(string name, double price, double weight);
     Dish(const Dish& other);
     Dish( Dish&& other);
-    ~Dish();
+    virtual ~Dish();
     void printInfo() ;
     void show();
 

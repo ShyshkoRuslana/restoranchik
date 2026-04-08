@@ -16,7 +16,7 @@ public:
     Salad(Salad&& other) noexcept;
     Salad& operator=(const Salad& other);
 
-    ~Salad();
+    virtual ~Salad();
     void printInfo();
     void show();
     virtual void getName();

@@ -134,9 +134,16 @@ int main() {
     s->getPrice();
 
     SpecialSalad special("грецький", 450, 340, "оливки", 290, "майонез", "no");
-    Salad& s_ref=special;
+    Salad& s_ref=special;//посилання на абстрактний клас
     s_ref.getName();
     s_ref.getPrice();
+
+
+
+
+
+
+
 
     return 0;
 }

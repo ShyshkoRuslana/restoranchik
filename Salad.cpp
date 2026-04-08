@@ -28,12 +28,15 @@ Salad& Salad::operator=(const Salad& other)
     }
     return *this;
 }
-Salad::~Salad() {};
+Salad::~Salad() {}
 
 void Salad::printInfo(){
     Dish::printInfo();
     cout<< " |With : " << with << " |Calories : " << cal << endl;
-};
+}
 void Salad::show() {
     cout << "This is salad" << endl;
+}
+void Salad::getPrice() {
+    cout << "salad price: " << endl;
 }

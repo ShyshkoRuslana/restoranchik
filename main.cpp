@@ -129,5 +129,8 @@ int main() {
     Dish* d = new Salad();
     d->show();
 
+    Salad* s = new SpecialSalad();
+    s->getPrice();
+
     return 0;
 }

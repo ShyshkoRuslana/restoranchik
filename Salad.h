@@ -19,6 +19,8 @@ public:
     ~Salad();
     void printInfo();
     void show();
+    virtual void getPrice();
+
 
 
 };

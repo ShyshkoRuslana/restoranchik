@@ -2,7 +2,7 @@
 #define SPECIALSALAD_H
 #include "Salad.h"
 
-class SpecialSalad: public Salad{
+class SpecialSalad final : public Salad{
 private:
     string sauce;
     string spicy;

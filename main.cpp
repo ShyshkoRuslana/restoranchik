@@ -133,5 +133,10 @@ int main() {
     s->getName();
     s->getPrice();
 
+    SpecialSalad special("грецький", 450, 340, "оливки", 290, "майонез", "no");
+    Salad& s_ref=special;
+    s_ref.getName();
+    s_ref.getPrice();
+
     return 0;
 }

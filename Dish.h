@@ -20,6 +20,7 @@ public:
     Dish( Dish&& other);
     ~Dish();
     void printInfo() ;
+    void show();
 
     Dish operator+(const Dish& other);
     Dish operator++();

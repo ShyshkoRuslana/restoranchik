@@ -44,3 +44,7 @@ istream& operator>>(istream& in, Dish& d) {
 void Dish::printInfo()  {
     cout << "Dish: " << name << " | Price: " << price << " | Weight: " << weight << endl;
 }
+
+void Dish::show() {
+    cout << "This is dish" << endl;
+}

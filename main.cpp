@@ -126,6 +126,8 @@ int main() {
     SpecialSalad s67("Цезар", 200, 300, "курка", 500, "часниковий", "yes");
     s67.printInfo();
 
+    Dish* d = new Salad();
+    d->show();
 
     return 0;
 }

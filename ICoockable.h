@@ -1,14 +1,14 @@
-//
-// Created by Ruslana on 08.04.2026.
-//
-
-#ifndef RESTORANCHIK_ICOOCKABLE_H
-#define RESTORANCHIK_ICOOCKABLE_H
-
+#ifndef ICOOCKABLE_H
+#define ICOOCKABLE_H
+#include <iostream>
 
 class ICoockable {
+public:
+    virtual void cook()=0;
+    virtual void serve()=0;
+    virtual ~ICoockable();
 
 };
 
 
-#endif //RESTORANCHIK_ICOOCKABLE_H
+#endif

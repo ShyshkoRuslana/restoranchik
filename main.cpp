@@ -5,6 +5,7 @@
 #include "Salad.h"
 #include "Menu.h"
 #include "SpecialSalad.h"
+#include "ICoockable.h"
 using namespace std;
 int main() {
     Menu menu;
@@ -138,10 +139,9 @@ int main() {
     s_ref.getName();
     s_ref.getPrice();
 
-
-
-
-
+    ICoockable* dish1 = new SpecialSalad("Морський", 450, 340, "криветки", 290, "майонез", "no");
+    dish1->cook();
+    dish1->serve();
 
 
 

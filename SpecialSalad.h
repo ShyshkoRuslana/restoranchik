@@ -1,8 +1,9 @@
 #ifndef SPECIALSALAD_H
 #define SPECIALSALAD_H
 #include "Salad.h"
+#include "ICoockable.h"
 
-class SpecialSalad final : public Salad{
+class SpecialSalad final : public Salad, public ICoockable{
 private:
     string sauce;
     string spicy;
@@ -14,6 +15,8 @@ public:
     void printInfo();
     virtual void getName()override;
     virtual void getPrice() override;
+    virtual void cook()override;
+    virtual void serve()override;
 
 
 };

@@ -27,7 +27,7 @@ void Customer::addOrder(const Order &o) {
 }
 
 void Customer::printOrder() {
-    cout<<"=== Order ==="<< name << endl;
+    cout<<"=== Order "<< name << " ===" << endl;
     for (auto& o:orders) {
         o.printInfo();
     }

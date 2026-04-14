@@ -6,7 +6,7 @@
 
 class Menu {
 private:
-    std::vector<Dish> dishes;
+    std::vector<Dish*> dishes;
 public:
     void addDish(const Dish& d);
     void printMenu();

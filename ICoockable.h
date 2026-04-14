@@ -7,8 +7,5 @@ public:
     virtual void cook()=0;
     virtual void serve()=0;
     virtual ~ICoockable();
-
 };
-
-
 #endif

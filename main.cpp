@@ -129,21 +129,22 @@ int main() {
 
     Dish* d = new Salad();
     d->show();
+    delete d;
 
     Salad* s = new SpecialSalad("Цезар", 200, 300, "курка", 500, "часниковий", "yes");
     s->getName();
     s->getPrice();
+    delete s;
 
     SpecialSalad special("грецький", 450, 340, "оливки", 290, "майонез", "no");
-    Salad& s_ref=special;//посилання на абстрактний клас
+    Salad& s_ref=special;
     s_ref.getName();
     s_ref.getPrice();
 
     ICoockable* dish1 = new SpecialSalad("Морський", 450, 340, "криветки", 290, "майонез", "no");
     dish1->cook();
     dish1->serve();
-
-
+    delete dish1;
 
     return 0;
 }

@@ -10,16 +10,13 @@ private:
 public:
     SpecialSalad();
     SpecialSalad(string name, double price, double weight, string with,float cal, string sause, string spicy);
-    ~SpecialSalad();
+    virtual ~SpecialSalad();
 
     void printInfo();
-    virtual void getName()override;
-    virtual void getPrice() override;
-    virtual void cook()override;
-    virtual void serve()override;
-
+    void getName()override;
+    void getPrice()override;
+    void cook()override;
+    void serve()override;
 
 };
-
-
 #endif

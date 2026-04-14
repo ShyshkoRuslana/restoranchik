@@ -8,15 +8,14 @@ class Salad : public Dish{
 protected:
     string with;
     float cal;
-
 public:
     Salad();
     Salad(string name, double price, double weight, string with,float cal );
     Salad(const Salad& other);
-    Salad(Salad&& other) noexcept;
+    virtual ~Salad();
+    Salad(Salad&& other);
     Salad& operator=(const Salad& other);
 
-    virtual ~Salad();
     void printInfo();
     void show();
     virtual void getName();

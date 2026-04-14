@@ -13,8 +13,7 @@ Salad::Salad(const Salad& other)
     cal = other.cal;
 }
 
-Salad::Salad(Salad&& other) noexcept
-        : Dish(std::move(other))
+Salad::Salad(Salad&& other) : Dish(std::move(other))
 {
     with = std::move(other.with);
     cal = other.cal;

@@ -17,4 +17,6 @@ add_executable(restoranchik main.cpp
         SpecialSalad.cpp
         SpecialSalad.h
         ICoockable.cpp
-        ICoockable.h)
+        ICoockable.h
+        System.cpp
+        System.h)

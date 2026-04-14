@@ -1,0 +1,10 @@
+#ifndef RESTORANCHIK_SYSTEM_H
+#define RESTORANCHIK_SYSTEM_H
+
+
+class System {
+
+};
+
+
+#endif //RESTORANCHIK_SYSTEM_H

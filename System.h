@@ -1,13 +1,16 @@
 #ifndef RESTORANCHIK_SYSTEM_H
 #define RESTORANCHIK_SYSTEM_H
 #include "Menu.h"
+#include "Order.h"
 
 
 class System{
 private:
     Menu& menu;
     std::vector<Dish> dishes;
+    std::vector<Order> orders;
     string password = "1111";
+    int nextorderId = 1;
 public:
     System(Menu &m);
     void start();
@@ -17,7 +20,8 @@ public:
     void deletedish();
     bool adminlogin();
     void adminmenu();
-    void username();
+    void makeorder();
+    void showorder();
     void usermenu();
     ~System();
 

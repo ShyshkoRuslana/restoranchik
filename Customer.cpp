@@ -15,7 +15,7 @@ Customer::Customer(const Customer& other) {
          count++;
 }
 Customer::Customer(Customer&& other){
-        name=move(other.name);
+        name=std::move(other.name);
         tablenumber=other.tablenumber;
         telnumber=other.telnumber;
         count++;

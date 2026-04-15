@@ -1,6 +1,8 @@
 #include "System.h"
 #include "Menu.h"
 #include "Dish.h"
+#include "Order.h"
+
 using namespace std;
 System::System(Menu& m) : menu(m) {}
 System::~System() {}
@@ -10,9 +12,8 @@ void System::start() {
         cout << "=== System ===" << endl;
         cout << "1. Admin login" << endl;
         cout << "2. Admin menu" << endl;
-        cout << "3. User name" << endl;
-        cout << "4. User menu" << endl;
-        cout << "5. Exit" << endl;
+        cout << "3. User menu" << endl;
+        cout << "4. Exit" << endl;
         cin >> choice;
         switch (choice) {
             case 1:
@@ -25,11 +26,9 @@ void System::start() {
                 break;
             case 3:
                 cout << "User selected" << endl;
-                username();
+                usermenu();
                 break;
             case 4:
-                break;
-            case 5:
                 cout << "Bye" << endl;
                 break;
             default:
@@ -81,7 +80,8 @@ void System::usermenu()  {
         cout << "=== User Menu ===" << endl;
         cout << "1. Show menu" << endl;
         cout << "2. Make order" << endl;
-        cout << "3. Exit" << endl;
+        cout << "3. Show my order" << endl;
+        cout << "4. Exit" << endl;
         cin >> choice;
         switch (choice) {
             case 1:
@@ -89,9 +89,13 @@ void System::usermenu()  {
                 menu.printMenu();
                 break;
             case 2:
-                cout << "User menu" << endl;
+                makeorder();
                 break;
             case 3:
+                for(auto& o : orders) {
+                    o.printInfo();
+                }
+            case 4:
                 return;
             default:
                 cout << "Wrong choice!" << endl;
@@ -140,4 +144,37 @@ void System::deletedish() {
     menu.deletedish(index);
 
 }
-void System::username() {}
+
+void System::makeorder(){
+        Order order(nextorderId++);
+        int choice;
+        while(true) {
+            menu.printMenu();
+            cout << "Enter dish index (-1 to finish): " << endl;
+            cin >> choice;
+            if(choice == -1) break;
+            if(choice >= 0 && choice < menu.getsize()) {
+                order.addDish(menu.getdish(choice));
+                cout << "Added!" << endl;
+            }
+            else {
+                cout << "Wrong index!" << endl;
+            }
+        }
+        orders.push_back(order);
+        cout << "ORDER CREATED!" << endl;
+        order.printInfo();
+    }
+void System::showorder() {
+    if(orders.empty()) {
+        cout << "No orders yet!" <<endl ;
+        return;
+    }
+    cout << "=== ORDER HISTORY ===" << endl;
+    for(int i = 0; i < orders.size(); i++) {
+        cout << "Order #" << (i + 1) << endl;
+        orders[i].printInfo();
+    }
+}
+
+

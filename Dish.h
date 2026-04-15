@@ -17,8 +17,9 @@ public:
     Dish(const Dish& other);
     Dish( Dish&& other);
     virtual ~Dish();
-    void printInfo() ;
+    void printInfo()const ;
     void show();
+    double getprice()const;
 
     Dish operator+(const Dish& other);
     Dish operator++();

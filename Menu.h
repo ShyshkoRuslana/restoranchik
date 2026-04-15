@@ -13,6 +13,8 @@ public:
     void printMenu();
     void updatedish(int index, const Dish& d);
     void deletedish(int index);
+    int getsize();
+    Dish getdish(int index);
 };
 
 #endif

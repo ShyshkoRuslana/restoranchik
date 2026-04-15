@@ -27,3 +27,10 @@ void Menu::deletedish(int index) {
         cout << "Invalid index!\n";
     }
 }
+int Menu::getsize() {
+    return dishes.size();
+}
+
+Dish Menu::getdish(int index) {
+    return dishes[index];
+}

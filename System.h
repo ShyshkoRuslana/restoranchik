@@ -8,6 +8,10 @@ private:
     Menu menu;
 public:
     void start();
+    void adminlogin();
+    void adminmenu();
+    void username();
+    void usermenu();
     ~System();
 
 

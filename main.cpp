@@ -6,9 +6,12 @@
 #include "Menu.h"
 #include "SpecialSalad.h"
 #include "ICoockable.h"
+#include "System.h"
 using namespace std;
 int main() {
-    Menu menu;
+    System system;
+    system.start();
+    /*Menu menu;
 
     cout << "===Customer1===" << endl;
     Customer c1;
@@ -144,7 +147,7 @@ int main() {
     ICoockable* dish1 = new SpecialSalad("Морський", 450, 340, "криветки", 290, "майонез", "no");
     dish1->cook();
     dish1->serve();
-    delete dish1;
+    delete dish1;*/
 
     return 0;
 }

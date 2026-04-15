@@ -13,6 +13,8 @@ public:
     void start();
     void addDish(const Dish& d);
     void printMenu();
+    void updatedish();
+    void deletedish();
     bool adminlogin();
     void adminmenu();
     void username();

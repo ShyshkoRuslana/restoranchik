@@ -11,3 +11,19 @@ void Menu::printMenu() {
         d.printInfo();
     }
 }
+void Menu::updatedish(int index, const Dish &d) {
+    if(index >= 0 && index < dishes.size()) {
+        dishes[index] = d;
+    }
+    else {
+        cout << "Invalid index!\n";
+    }
+}
+void Menu::deletedish(int index) {
+    if(index >= 0 && index < dishes.size()) {
+        dishes.erase(dishes.begin() + index);
+    }
+    else {
+        cout << "Invalid index!\n";
+    }
+}

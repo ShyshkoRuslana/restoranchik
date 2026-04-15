@@ -9,9 +9,7 @@
 #include "System.h"
 using namespace std;
 int main() {
-    System system;
-    system.start();
-    /*Menu menu;
+    Menu menu;
 
     cout << "===Customer1===" << endl;
     Customer c1;
@@ -86,13 +84,13 @@ int main() {
     cout << "-----------------------------" << endl;
 
 
-    cout << "===Customer7===" << endl;
+    /*cout << "===Customer7===" << endl;
     Dish d7;
     cout << "Enter dish (name price weight): ";
     cin >> d7;
     menu.addDish(d7);
     cout << "You entered: " << d7 << endl;
-    cout << "-----------------------------" << endl;
+    cout << "-----------------------------" << endl;*/
 
 
     cout << "Total customers created:" << Customer::getcount() << endl;
@@ -147,7 +145,10 @@ int main() {
     ICoockable* dish1 = new SpecialSalad("Морський", 450, 340, "криветки", 290, "майонез", "no");
     dish1->cook();
     dish1->serve();
-    delete dish1;*/
+    delete dish1;
+
+    System system(menu);
+    system.start();
 
     return 0;
 }

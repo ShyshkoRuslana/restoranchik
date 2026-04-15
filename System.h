@@ -3,12 +3,17 @@
 #include "Menu.h"
 
 
-class System {
+class System{
 private:
-    Menu menu;
+    Menu& menu;
+    std::vector<Dish> dishes;
+    string password = "1111";
 public:
+    System(Menu &m);
     void start();
-    void adminlogin();
+    void addDish(const Dish& d);
+    void printMenu();
+    bool adminlogin();
     void adminmenu();
     void username();
     void usermenu();

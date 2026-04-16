@@ -10,9 +10,10 @@ private:
     Menu& menu;
     std::vector<Dish> dishes;
     std::vector<Order> orders;
-    std::vector<Customer>customers;
+    vector<shared_ptr<Customer>> customers;
     string password = "1111";
     int nextorderId = 1;
+    string action;
 public:
     System(Menu &m);
     void start();
@@ -26,9 +27,13 @@ public:
     void makeorder();
     void showorder();
     void usermenu();
-    void userlogin();
+    shared_ptr<Customer>customerlogin();
     void loadcustomer();
     void savecustomer();
+    void saveorder();
+    void loadorder();
+    void savehistory(string action);
+    void showhistory();
     ~System();
 
 

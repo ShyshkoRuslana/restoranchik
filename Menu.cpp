@@ -56,5 +56,6 @@ void Menu::loadfile(){
         dishes.push_back(d);
     }
 
+
     file.close();
 }

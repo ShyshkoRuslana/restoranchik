@@ -22,8 +22,6 @@ public:
 
     void printInfo()const;
     void addDish(Dish);
-    void savefiles();
-    void loadfiles();
     int getId()const;
     vector <Dish> getDishes()const;
     double getTotal()const;

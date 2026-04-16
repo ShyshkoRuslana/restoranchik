@@ -33,28 +33,7 @@ void Order::addDish(Dish d) {
     dishes.push_back(d);
     totalsum += d.getprice();
 }
-void Order::savefiles() {
-    ofstream file("orders.txt");
-    for (const Order &o: orders) {
-        file << o.getId() << ":";
-        for (const Dish &d: o.getDishes()) {
-            file << d.getname() << ",";
-        }
-        file << ":" << o.getTotal() << endl;
-    }
-    file.close();
-}
-void Order::loadfiles(){
-    ifstream file("orders.txt");
-    if(!file.is_open()) return;
-    string name;
-    double price, weight;
-    while(file >> name >> price >> weight) {
-        Dish d(name, price, weight);
-        dishes.push_back(d);
-    }
-    file.close();
-}
+
 int Order::getId() const {
     return ordernumber;
 }

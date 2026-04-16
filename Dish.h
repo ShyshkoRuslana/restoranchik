@@ -20,6 +20,10 @@ public:
     void printInfo()const ;
     void show();
     double getprice()const;
+    double getweight()const;
+    string getname()const;
+
+
 
     Dish operator+(const Dish& other);
     Dish operator++();

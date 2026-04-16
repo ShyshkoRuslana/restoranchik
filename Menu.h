@@ -15,6 +15,8 @@ public:
     void deletedish(int index);
     int getsize();
     Dish getdish(int index);
+    void savefile();
+    void loadfile();
 };
 
 #endif

@@ -2,6 +2,7 @@
 #include "Menu.h"
 #include "Dish.h"
 #include "Order.h"
+#include <fstream>
 
 using namespace std;
 System::System(Menu& m) : menu(m) {}
@@ -9,11 +10,11 @@ System::~System() {}
 void System::start() {
     int choice;
     while(true){
+        menu.savefile();
         cout << "=== System ===" << endl;
         cout << "1. Admin login" << endl;
-        cout << "2. Admin menu" << endl;
-        cout << "3. User menu" << endl;
-        cout << "4. Exit" << endl;
+        cout << "2. User login" << endl;
+        cout << "3. Exit" << endl;
         cin >> choice;
         switch (choice) {
             case 1:
@@ -22,17 +23,28 @@ void System::start() {
                     adminmenu();}
                 break;
             case 2:
-                adminmenu();
-                break;
-            case 3:
                 cout << "User selected" << endl;
                 usermenu();
                 break;
-            case 4:
+            case 3:
                 cout << "Bye" << endl;
                 break;
             default:
                 cout << "Wrong choice!" << endl;
+        }
+    }
+}
+bool System::adminlogin() {
+    string input;
+    while(true){
+        cout << "Enter password: " << endl;
+        cin >> input;
+        if (input == password){
+            cout << "Super " << endl;
+            return true;
+        }
+        else{
+            cout << "invalid " << endl;
         }
     }
 }
@@ -44,10 +56,12 @@ void System::adminmenu() {
         cout << "2. Update dish" << endl;
         cout << "3. Show menu" << endl;
         cout << "4. Delete dish" << endl;
+        cout << "5. Create customer" << endl;
         cout << "5. Exit" << endl;
         cin >> choice;
         switch (choice) {
             case 1:{
+                menu.loadfile();
                 cout << "Add dish..." << endl;
                 string name;
                 double price, weight;
@@ -55,6 +69,7 @@ void System::adminmenu() {
                 cin >> name >> price >> weight;
                 Dish d (name,price,weight);
                 menu.addDish(d);
+                menu.savefile();
                 break;
             }
             case 2:
@@ -68,6 +83,9 @@ void System::adminmenu() {
                 deletedish();
                 break;
             case 5:
+                createcustomer();
+                break;
+            case 6:
                 return;
             default:
                 cout << "Wrong choice!" << endl;
@@ -102,6 +120,9 @@ void System::usermenu()  {
         }
     }
 }
+void System::userlogin() {
+
+}
 void System::printMenu() {
     cout << "=== Menu ===" << endl;
     for (auto& d : dishes) {
@@ -111,20 +132,7 @@ void System::printMenu() {
 void System::addDish(const Dish& d) {
     dishes.push_back(d);
 }
-bool System::adminlogin() {
-    string input;
-    while(true){
-        cout << "Enter password: " << endl;
-        cin >> input;
-        if (input == password){
-            cout << "Super " << endl;
-            return true;
-        }
-        else{
-            cout << "invalid " << endl;
-        }
-    }
-}
+
 void System::updatedish() {
     menu.printMenu();
     int index;
@@ -176,5 +184,42 @@ void System::showorder() {
         orders[i].printInfo();
     }
 }
+void System::loadcustomer() {
+    ifstream file("users.txt");
 
+    string name,surname,login;
+
+    while(file >> name >> surname >> login) {
+        customers.push_back(Customer(name,surname,login));
+    }
+
+    file.close();
+}
+void System::savecustomer()   {
+    ofstream file("users.txt");
+
+    for(auto& u : customers) {
+        file << u.getname() << " " << u.getsurname()<< " " << u.getlogin()  << endl;
+    }
+
+    file.close();
+}
+void System::createcustomer() {
+    string name, surname, login;
+
+    cout << "Name: ";
+    cin >> name;
+
+    cout << "Surname: ";
+    cin >> surname;
+
+    cout << "Login: ";
+    cin >> login;
+
+    customers.push_back(Customer(name,surname,login));
+    savecustomer();
+    cout << "User created!" << endl;
+}
+
+}
 

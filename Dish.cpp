@@ -51,3 +51,9 @@ void Dish::show() {
 double Dish::getprice() const {
     return price;
 }
+double Dish::getweight() const {
+    return weight;
+}
+string Dish::getname() const {
+    return name;
+}
